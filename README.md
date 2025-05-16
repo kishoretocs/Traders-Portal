@@ -223,8 +223,6 @@ Share publicly via ngrok:
 https://6fd5-2401-4900-1f2c-49a1-a4ce-b658-5276-6148.ngrok-free.app//swagger/
 ```
 
-Invite **abdul.jaseem@tradebrains.in** as needed.
-
 ---
 
 ## ☁️ Deployment
