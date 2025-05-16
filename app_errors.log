@@ -1,0 +1,507 @@
+Watching for file changes with StatReloader
+"POST /auth/register/ HTTP/1.1" 201 48
+Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py", line 34, in post
+    user = User.objects.get(Q(username=identifier) | Q(email=identifier))
+                            ^
+NameError: name 'Q' is not defined
+"POST /auth/login/ HTTP/1.1" 500 96653
+Internal Server Error: /auth/login/
+Traceback (most recent call last):
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py", line 34, in post
+    user = User.objects.get(Q(username=identifier) | Q(email=identifier))
+                            ^
+NameError: name 'Q' is not defined
+"POST /auth/login/ HTTP/1.1" 500 96606
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /auth/login/ HTTP/1.1" 200 483
+Watching for file changes with StatReloader
+Method Not Allowed: /api/companies/
+"POST /api/companies/ HTTP/1.1" 405 41
+Internal Server Error: /api/companies/
+Traceback (most recent call last):
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/decorators/csrf.py", line 65, in _view_wrapper
+    return view_func(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/views/generic/base.py", line 104, in view
+    return self.dispatch(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 515, in dispatch
+    response = self.handle_exception(exc)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 475, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 486, in raise_uncaught_exception
+    raise exc
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/views.py", line 512, in dispatch
+    response = handler(request, *args, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/generics.py", line 203, in get
+    return self.list(request, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/mixins.py", line 43, in list
+    return self.get_paginated_response(serializer.data)
+                                       ^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 797, in data
+    ret = super().data
+          ^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 251, in data
+    self._data = self.to_representation(self.instance)
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 716, in to_representation
+    self.child.to_representation(item) for item in iterable
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 525, in to_representation
+    for field in fields:
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 386, in _readable_fields
+    for field in self.fields.values():
+                 ^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/django/utils/functional.py", line 47, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 374, in fields
+    for key, value in self.get_fields().items():
+                      ^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 1105, in get_fields
+    field_class, field_kwargs = self.build_field(
+                                ^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 1251, in build_field
+    return self.build_unknown_field(field_name, model_class)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/kishore/programing/assigments/env/lib/python3.12/site-packages/rest_framework/serializers.py", line 1369, in build_unknown_field
+    raise ImproperlyConfigured(
+django.core.exceptions.ImproperlyConfigured: Field name `symboy` is not valid for model `Company` in `companies.serializers.CompanySerializer`.
+"GET /api/companies/ HTTP/1.1" 500 158124
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/serializers.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /api/companies/ HTTP/1.1" 200 4760
+"GET /api/companies/?limit=50&offset=50 HTTP/1.1" 200 4647
+"GET /api/companies/?limit=50 HTTP/1.1" 200 4760
+"GET /api/companies/ HTTP/1.1" 200 4760
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/ HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 58
+"POST /auth/login/ HTTP/1.1" 200 483
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 172
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 172
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 176
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 172
+"POST /auth/login/ HTTP/1.1" 200 483
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 200 52
+Not Found: /api/watchlist/add/1/
+"POST /api/watchlist/add/1/ HTTP/1.1" 404 4361
+Not Found: /api/watchlist/add/1/
+"POST /api/watchlist/add/1/ HTTP/1.1" 404 4361
+"GET /api/companies/ HTTP/1.1" 200 4760
+Unauthorized: /api/watchlist/add/
+"POST /api/watchlist/add/ HTTP/1.1" 401 172
+"POST /auth/login/ HTTP/1.1" 200 483
+Internal Server Error: /api/watchlist/add/
+"POST /api/watchlist/add/ HTTP/1.1" 500 33
+Internal Server Error: /api/watchlist/add/
+"POST /api/watchlist/add/ HTTP/1.1" 500 33
+"POST /api/watchlist/add/ HTTP/1.1" 201 32
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 200 113
+"POST /api/watchlist/add/ HTTP/1.1" 201 32
+"POST /api/watchlist/add/ HTTP/1.1" 201 32
+"POST /api/watchlist/add/ HTTP/1.1" 201 32
+"POST /api/watchlist/add/ HTTP/1.1" 200 28
+Not Found: /api/watchlist/remove/
+"POST /api/watchlist/remove/ HTTP/1.1" 404 4364
+Method Not Allowed: /api/watchlist/remove/2/
+"POST /api/watchlist/remove/2/ HTTP/1.1" 405 41
+"DELETE /api/watchlist/remove/2/ HTTP/1.1" 200 36
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 200 237
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3321
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3372
+"GET /admin HTTP/1.1" 301 0
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 200 2804
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 200 2810
+"GET /static/admin/css/login.css HTTP/1.1" 200 951
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/js/theme.js HTTP/1.1" 200 1653
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 200 3063
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4323
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4323
+"POST /admin/login/?next=/admin/ HTTP/1.1" 200 4323
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 9727
+"GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+"GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 10040
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/js/filters.js HTTP/1.1" 200 978
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+"GET /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 200 14823
+"GET /static/admin/css/forms.css HTTP/1.1" 200 8794
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+"GET /static/admin/js/inlines.js HTTP/1.1" 200 15526
+"GET /static/admin/css/widgets.css HTTP/1.1" 200 11564
+"GET /static/admin/img/icon-unknown.svg HTTP/1.1" 200 655
+"GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+"POST /admin/django_celery_beat/intervalschedule/add/ HTTP/1.1" 302 0
+"GET /admin/django_celery_beat/intervalschedule/ HTTP/1.1" 200 11572
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/icon-yes.svg HTTP/1.1" 200 436
+"GET /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 200 34883
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/js/calendar.js HTTP/1.1" 200 9141
+"GET /static/admin/js/admin/DateTimeShortcuts.js HTTP/1.1" 200 19319
+"GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+"GET /static/admin/img/icon-calendar.svg HTTP/1.1" 200 1086
+"GET /static/admin/img/icon-clock.svg HTTP/1.1" 200 677
+"POST /admin/django_celery_beat/periodictask/add/ HTTP/1.1" 302 0
+"GET /admin/django_celery_beat/periodictask/ HTTP/1.1" 200 16622
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/search.svg HTTP/1.1" 200 458
+"GET /static/admin/img/icon-no.svg HTTP/1.1" 200 560
+Watching for file changes with StatReloader
+Not Found: /swigger
+"GET /swigger HTTP/1.1" 404 3910
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 5174
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 3949
+"GET /swagger.json HTTP/1.1" 200 5174
+"GET /redoc HTTP/1.1" 301 0
+"GET /redoc/ HTTP/1.1" 200 934
+"GET /static/drf-yasg/redoc-init.js HTTP/1.1" 200 2566
+"GET /static/drf-yasg/redoc/redoc.min.js HTTP/1.1" 200 1042511
+"GET /redoc/?format=openapi HTTP/1.1" 200 5174
+"GET /static/drf-yasg/redoc/redoc-logo.png HTTP/1.1" 200 4969
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/urls.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /swagger/?format=openapi HTTP/1.1" 200 5329
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 3949
+Not Found: /accounts/login/
+"GET /accounts/login/?next=/swagger/ HTTP/1.1" 404 3949
+Bad Request: /auth/login/
+"POST /auth/login/ HTTP/1.1" 400 79
+Bad Request: /auth/login/
+"POST /auth/login/ HTTP/1.1" 400 79
+Bad Request: /auth/login/
+"POST /auth/login/ HTTP/1.1" 400 79
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /swagger/?format=openapi HTTP/1.1" 200 5329
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+Bad Request: /auth/login/
+"POST /auth/login/ HTTP/1.1" 400 79
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /swagger/?format=openapi HTTP/1.1" 200 5329
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/serializer.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /swagger/?format=openapi HTTP/1.1" 200 5958
+"POST /auth/register/ HTTP/1.1" 201 52
+"POST /auth/login/ HTTP/1.1" 200 483
+"GET /api/companies/ HTTP/1.1" 200 4760
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3916
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3967
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3916
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3967
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /admin/ HTTP/1.1" 200 10527
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3922
+"GET /swagger/ HTTP/1.1" 200 2220
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 304 0
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 304 0
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 304 0
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 304 0
+"GET /static/drf-yasg/style.css HTTP/1.1" 304 0
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 304 0
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 304 0
+"GET /swagger/?format=openapi HTTP/1.1" 200 5958
+"POST /auth/login/ HTTP/1.1" 200 483
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3916
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3967
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3917
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3968
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /swagger/?format=openapi HTTP/1.1" 200 6004
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /swagger/?format=openapi HTTP/1.1" 200 6004
+Unauthorized: /auth/login/
+"POST /auth/login/ HTTP/1.1" 401 32
+"POST /auth/login/ HTTP/1.1" 200 483
+"GET /api/companies/ HTTP/1.1" 200 4806
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /auth/register/ HTTP/1.1" 201 48
+Not Found: /
+"GET / HTTP/1.1" 404 3917
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3968

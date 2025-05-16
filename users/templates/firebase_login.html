@@ -1,0 +1,282 @@
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Firebase Google Login (Modular SDK)</title>
+    <link rel="icon" href="data:," />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        margin: 0;
+      }
+      #login-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 320px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 15px;
+        cursor: pointer;
+        background: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      #status {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #555;
+        min-height: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Login with Google</h2>
+      <button id="google-btn">Sign in with Google</button>
+      <div id="status"></div>
+    </div>
+
+    <script type="module">
+      // 1) Import Firebase modular SDK
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithRedirect,
+        getRedirectResult,
+        setPersistence,
+        browserLocalPersistence,
+      } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+      // 2) Your Firebase project config
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3DjP6fBg7jJgs1EQvvwLsvKKAdgncP7g",
+        authDomain: "tradersportal-3bf07.firebaseapp.com",
+        projectId: "tradersportal-3bf07",
+        storageBucket: "tradersportal-3bf07.appspot.com",
+        messagingSenderId: "1067143766064",
+        appId: "1:1067143766064:web:297b42e5af46f688768df5",
+      };
+
+      // 3) Initialize Firebase & Auth, then enable LOCAL persistence
+      console.log("Initializing Firebase…");
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      await setPersistence(auth, browserLocalPersistence); // LOCAL persistence :contentReference[oaicite:2]{index=2}
+      const provider = new GoogleAuthProvider();
+      console.log("Firebase initialized.");
+
+      // 4) DOM ready → wire up UI and redirect flow
+      window.addEventListener("DOMContentLoaded", () => {
+        const statusDiv = document.getElementById("status");
+        const btn = document.getElementById("google-btn");
+
+        // a) Handle return from Google OAuth
+        (async function handleRedirect() {
+          statusDiv.textContent = "Checking login status…";
+          console.log("→ getRedirectResult");
+          const result = await getRedirectResult(auth);
+          console.log("← getRedirectResult:", result);
+
+          if (!result || !result.user) {
+            statusDiv.textContent = "Ready to sign in.";
+            return;
+          }
+
+          statusDiv.textContent = "Login successful! Verifying…";
+          const idToken = await result.user.getIdToken();
+          console.log("→ got ID token:", idToken);
+
+          // POST to Django backend
+          const res = await fetch("/login/firebase/", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "X-CSRFToken": getCookie("csrftoken"),
+            },
+            body: JSON.stringify({ idToken }),
+          });
+
+          if (!res.ok) throw new Error(`Server error ${res.status}`);
+          const data = await res.json();
+          statusDiv.textContent = `Welcome, ${data.email}!`;
+          console.log("✔ Backend verified:", data);
+        })().catch((err) => {
+          console.error("Redirect flow error:", err);
+          statusDiv.textContent = `Error: ${err.message}`;
+        });
+
+        // b) Button click → redirect to Google (no pop‑up blockers) :contentReference[oaicite:3]{index=3}
+        btn.addEventListener("click", () => {
+          statusDiv.textContent = "Redirecting to Google…";
+          console.log("→ signInWithRedirect");
+          signInWithRedirect(auth, provider);
+        });
+      });
+
+      // CSRF helper
+      function getCookie(name) {
+        let value = null;
+        document.cookie.split(";").forEach((cookie) => {
+          const [k, v] = cookie.trim().split("=");
+          if (k === name) value = decodeURIComponent(v);
+        });
+        return value;
+      }
+    </script>
+  </body>
+</html> -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Firebase Google Login (Modular SDK)</title>
+    <link rel="icon" href="data:," />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #f4f4f4;
+        margin: 0;
+      }
+      #login-container {
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 320px;
+      }
+      button {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        margin-top: 15px;
+        cursor: pointer;
+        background: #4285f4;
+        color: white;
+        border: none;
+        border-radius: 4px;
+      }
+      #status {
+        margin-top: 15px;
+        font-size: 14px;
+        color: #555;
+        min-height: 1.2em;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Login with Google</h2>
+      <button id="google-btn">Sign in with Google</button>
+      <div id="status"></div>
+    </div>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-app.js";
+      import {
+        getAuth,
+        GoogleAuthProvider,
+        signInWithRedirect,
+        getRedirectResult,
+        setPersistence,
+        browserLocalPersistence,
+      } from "https://www.gstatic.com/firebasejs/10.12.4/firebase-auth.js";
+
+      // 1) Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyA3DjP6fBg7jJgs1EQvvwLsvKKAdgncP7g",
+        authDomain: "tradersportal-3bf07.firebaseapp.com",
+        projectId: "tradersportal-3bf07",
+        storageBucket: "tradersportal-3bf07.appspot.com",
+        messagingSenderId: "1067143766064",
+        appId: "1:1067143766064:web:297b42e5af46f688768df5",
+      };
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      // 2) DOM ready → wire up everything
+      window.addEventListener("DOMContentLoaded", () => {
+        const btn = document.getElementById("google-btn");
+        const statusDiv = document.getElementById("status");
+
+        if (!btn) {
+          console.error("Button #google-btn not found in DOM");
+          return;
+        }
+
+        // 3) Enable persistence then attach click handler
+        setPersistence(auth, browserLocalPersistence)
+          .then(() => {
+            console.log("Persistence enabled");
+            btn.addEventListener("click", () => {
+              console.log("✅ Button clicked");
+              statusDiv.textContent = "Redirecting to Google…";
+              signInWithRedirect(auth, provider);
+            });
+          })
+          .catch((err) => {
+            console.error("Error setting persistence:", err);
+            statusDiv.textContent = `Error: ${err.message}`;
+          });
+
+        // 4) Handle redirect result
+        (async () => {
+          statusDiv.textContent = "Checking login status…";
+          try {
+            const result = await getRedirectResult(auth);
+            console.log("Redirect result:", result);
+            if (result && result.user) {
+              statusDiv.textContent = "Login successful! Verifying…";
+              const idToken = await result.user.getIdToken();
+              console.log("Got ID token:", idToken);
+              const res = await fetch("/login/firebase/", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                  "X-CSRFToken": getCookie("csrftoken"),
+                },
+                body: JSON.stringify({ idToken }),
+              });
+              if (!res.ok) throw new Error(`Server: ${res.status}`);
+              const data = await res.json();
+              statusDiv.textContent = `Welcome, ${data.email}!`;
+            } else {
+              statusDiv.textContent = "Ready to sign in.";
+            }
+          } catch (err) {
+            console.error("Redirect flow error:", err);
+            statusDiv.textContent = `Error: ${err.message}`;
+          }
+        })();
+      });
+
+      // CSRF helper
+      function getCookie(name) {
+        let cookieValue = null;
+        document.cookie.split(";").forEach((cookie) => {
+          const [k, v] = cookie.trim().split("=");
+          if (k === name) cookieValue = decodeURIComponent(v);
+        });
+        return cookieValue;
+      }
+    </script>
+  </body>
+</html>
