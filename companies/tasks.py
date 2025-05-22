@@ -1,5 +1,3 @@
-# companies/tasks.py
-
 import csv
 import requests
 from io import StringIO

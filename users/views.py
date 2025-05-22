@@ -46,7 +46,8 @@ class LogoutView(generics.GenericAPIView):
     def post(self,request):
         try:
             refresh_token = self.get_serializer(data=request.data)
-            token = RefreshToken(refresh_token)
+            refresh_token.is_valid(raise_exception=True)     
+            token = RefreshToken(refresh_token.validated_data['refresh'])
             token.blacklist()
             return Response(status=status.HTTP_205_RESET_CONTENT)
         except Exception as e:

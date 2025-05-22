@@ -1,0 +1,140 @@
+<!-- templates/login_v9.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Firebase Google Sign-In</title>
+  </head>
+  <body>
+    <div id="login-container">
+      <h2>Login to Traders Portal</h2>
+      <button id="google-signin-btn">Sign in with Google</button>
+      <div id="user-info" style="display: none">
+        <h3>Welcome!</h3>
+        <p id="user-name"></p>
+        <p id="user-email"></p>
+        <button id="logout-btn">Logout</button>
+      </div>
+    </div>
+
+    <script type="module">
+      // Import Firebase v9+ modules
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-app.js";
+      import {
+        getAuth,
+        signInWithPopup,
+        GoogleAuthProvider,
+        signOut,
+        onAuthStateChanged,
+      } from "https://www.gstatic.com/firebasejs/9.22.0/firebase-auth.js";
+
+      // Firebase configuration
+      const firebaseConfig = {
+        apiKey: "{{ firebase_config.apiKey }}",
+        authDomain: "{{ firebase_config.authDomain }}",
+        projectId: "{{ firebase_config.projectId }}",
+        storageBucket: "{{ firebase_config.storageBucket }}",
+        messagingSenderId: "{{ firebase_config.messagingSenderId }}",
+        appId: "{{ firebase_config.appId }}",
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+
+      // Google Sign-In
+      document
+        .getElementById("google-signin-btn")
+        .addEventListener("click", () => {
+          signInWithPopup(auth, provider)
+            .then((result) => {
+              const user = result.user;
+              console.log("User signed in:", user);
+
+              // Get Firebase ID token
+              user.getIdToken().then((idToken) => {
+                // Send token to Django backend
+                fetch("/api/verify-firebase-token/", {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "X-CSRFToken": getCookie("csrftoken"),
+                  },
+                  body: JSON.stringify({
+                    idToken: idToken,
+                  }),
+                })
+                  .then((response) => response.json())
+                  .then((data) => {
+                    if (data.success) {
+                      showUserInfo(user);
+                      // Redirect to dashboard or reload page
+                      window.location.href = "/dashboard/";
+                    }
+                  })
+                  .catch((error) => {
+                    console.error("Error sending token to backend:", error);
+                  });
+              });
+            })
+            .catch((error) => {
+              console.error("Error during sign-in:", error);
+            });
+        });
+
+      // Logout
+      document.getElementById("logout-btn").addEventListener("click", () => {
+        signOut(auth).then(() => {
+          fetch("/api/logout/", {
+            method: "POST",
+            headers: {
+              "X-CSRFToken": getCookie("csrftoken"),
+            },
+          });
+          hideUserInfo();
+        });
+      });
+
+      // Show user info
+      function showUserInfo(user) {
+        document.getElementById("login-container").style.display = "none";
+        document.getElementById("user-info").style.display = "block";
+        document.getElementById("user-name").textContent = user.displayName;
+        document.getElementById("user-email").textContent = user.email;
+      }
+
+      // Hide user info
+      function hideUserInfo() {
+        document.getElementById("login-container").style.display = "block";
+        document.getElementById("user-info").style.display = "none";
+      }
+
+      // Get CSRF token
+      function getCookie(name) {
+        let cookieValue = null;
+        if (document.cookie && document.cookie !== "") {
+          const cookies = document.cookie.split(";");
+          for (let i = 0; i < cookies.length; i++) {
+            const cookie = cookies[i].trim();
+            if (cookie.substring(0, name.length + 1) === name + "=") {
+              cookieValue = decodeURIComponent(
+                cookie.substring(name.length + 1)
+              );
+              break;
+            }
+          }
+        }
+        return cookieValue;
+      }
+
+      // Check if user is already signed in
+      onAuthStateChanged(auth, (user) => {
+        if (user) {
+          showUserInfo(user);
+        } else {
+          hideUserInfo();
+        }
+      });
+    </script>
+  </body>
+</html>

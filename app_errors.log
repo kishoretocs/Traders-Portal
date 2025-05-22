@@ -505,3 +505,33 @@ Not Found: /
 "GET / HTTP/1.1" 404 3917
 Not Found: /favicon.ico
 "GET /favicon.ico HTTP/1.1" 404 3968
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /login/ HTTP/1.1" 200 4268
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4984
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5095
+"GET /login/ HTTP/1.1" 200 4561
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5095
+"GET /login/ HTTP/1.1" 200 4561
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5095
+"GET /login/ HTTP/1.1" 200 4564
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 5095
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 4984
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/urls.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/users/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Not Found: /login/
+"GET /login/ HTTP/1.1" 404 3907
+Not Found: /.well-known/appspecific/com.chrome.devtools.json
+"GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4033
