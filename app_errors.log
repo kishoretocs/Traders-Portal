@@ -535,3 +535,79 @@ Not Found: /login/
 "GET /login/ HTTP/1.1" 404 3907
 Not Found: /.well-known/appspecific/com.chrome.devtools.json
 "GET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1" 404 4033
+Watching for file changes with StatReloader
+Not Found: /
+"GET / HTTP/1.1" 404 3916
+Not Found: /favicon.ico
+"GET /favicon.ico HTTP/1.1" 404 3967
+"GET /swagger HTTP/1.1" 301 0
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /static/drf-yasg/swagger-ui-init.js HTTP/1.1" 200 15480
+"GET /static/drf-yasg/insQ.min.js HTTP/1.1" 200 2093
+"GET /static/drf-yasg/style.css HTTP/1.1" 200 1047
+"GET /static/drf-yasg/immutable.min.js HTTP/1.1" 200 56904
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui.css HTTP/1.1" 200 145206
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-standalone-preset.js HTTP/1.1" 200 322863
+"GET /static/drf-yasg/swagger-ui-dist/swagger-ui-bundle.js HTTP/1.1" 200 1046583
+"GET /swagger/?format=openapi HTTP/1.1" 200 6003
+"GET /static/drf-yasg/swagger-ui-dist/favicon-32x32.png HTTP/1.1" 200 628
+"POST /auth/login/ HTTP/1.1" 200 483
+"GET /api/companies/ HTTP/1.1" 200 4805
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/ HTTP/1.1" 401 58
+"GET /api/companies/ HTTP/1.1" 200 4805
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/ HTTP/1.1" 401 58
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 401 172
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/TradersPortal/settings.py changed, reloading.
+Watching for file changes with StatReloader
+"POST /auth/login/ HTTP/1.1" 200 483
+Unauthorized: /api/watchlist/
+"GET /api/watchlist/ HTTP/1.1" 401 58
+"GET /api/companies/ HTTP/1.1" 200 4805
+"GET /api/watchlist/?access=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ3Mjk0NjU5LCJpYXQiOjE3NDcyOTQzNTksImp0aSI6ImQ0ZDI1MDhlOTEyZDQ4NDFhNjEyNjlkNmU1ODE2YWQ0IiwidXNlcl9pZCI6MX0.9dVZPjLyqzkr1BbpdJzz216Ac4jthJU01WbF5e03pIY&refresh=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NzM4MDc1OSwiaWF0IjoxNzQ3Mjk0MzU5LCJqdGkiOiJiMDlmYjUwOWJjNzU0MGQ2YjMxMjM4NDYxOGE2ODk1MCIsInVzZXJfaWQiOjF9.pa7fhDnWgJdkIRWYVPzam_u0ry3WJM3hu6oN3gKeAys HTTP/1.1" 200 52
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+"GET /swagger/ HTTP/1.1" 200 1663
+"GET /swagger/?format=openapi HTTP/1.1" 200 6145
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/views.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/models.py changed, reloading.
+Watching for file changes with StatReloader
+/home/kishore/programing/assigments/TradersPortal/TradersPortal/companies/models.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+"GET /admin/ HTTP/1.1" 302 0
+"GET /admin/login/?next=/admin/ HTTP/1.1" 200 4160
+"GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+"GET /static/admin/css/login.css HTTP/1.1" 304 0
+"GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+"GET /static/admin/js/theme.js HTTP/1.1" 304 0
+"GET /static/admin/css/responsive.css HTTP/1.1" 200 17972
+"GET /static/admin/css/base.css HTTP/1.1" 200 22092
+"GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+"POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+"GET /admin/ HTTP/1.1" 200 11844
+"GET /static/admin/css/dashboard.css HTTP/1.1" 304 0
+"GET /static/admin/img/icon-addlink.svg HTTP/1.1" 304 0
+"GET /static/admin/img/icon-changelink.svg HTTP/1.1" 304 0
+"GET /admin/companies/company/ HTTP/1.1" 200 41720
+"GET /static/admin/css/changelists.css HTTP/1.1" 200 6878
+"GET /static/admin/js/actions.js HTTP/1.1" 200 8076
+"GET /static/admin/js/core.js HTTP/1.1" 200 6208
+"GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9097
+"GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+"GET /static/admin/js/jquery.init.js HTTP/1.1" 304 0
+"GET /static/admin/js/prepopulate.js HTTP/1.1" 304 0
+"GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+"GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+"GET /static/admin/js/filters.js HTTP/1.1" 304 0
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342
+"GET /static/admin/img/tooltag-add.svg HTTP/1.1" 304 0
+"GET /admin/companies/finalcial/ HTTP/1.1" 200 44217
+"GET /admin/jsi18n/ HTTP/1.1" 200 3342

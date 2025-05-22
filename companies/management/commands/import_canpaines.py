@@ -8,9 +8,8 @@ from companies.models import Company
 from django.core.management.base import BaseCommand
 
 CSV_DOWNLOAD_URL = (
-    "https://drive.google.com/uc?id=1dg0UnNgK0fmc7KyZHXVvGDGu6z7wwTTk&export=download"
+    "https://drive.google.com/drive/folders/1wSdkS8MeUO3ORy5h5FKhel6K5xNZ4R8l"
 )
-
 
 @shared_task
 def import_companies_task():
@@ -25,7 +24,6 @@ def import_companies_task():
         symbol = (row.get('symbol') or '').strip()
         name   = (row.get('company_name') or '').strip()
         code   = (row.get('scripcode') or '').strip()
-        code_str = (row.get('co_code') or '').strip()
         try:
             co_code = int(code_str)
         except ValueError:
@@ -38,8 +36,8 @@ def import_companies_task():
         try:
             with transaction.atomic():
                 obj, was_created = Company.objects.update_or_create(
-                    co_code=co_code,
-                    defaults={'company_name': name, 'scripcode': code, 'symbol':symbol}
+                    symbol=symbol,
+                    defaults={'company_name': name, 'scripcode': code, 'co_code':co_code}
                 )
             if was_created:
                 created += 1

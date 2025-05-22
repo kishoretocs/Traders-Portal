@@ -3,16 +3,24 @@ from django.conf import settings
 
 class Company(models.Model):
     company_name = models.CharField(max_length=255,)
-    symbol = models.CharField(max_length=20,unique=True,)
-    scripcode = models.CharField(max_length=20,unique=True)
+    symbol = models.CharField(max_length=20,null=True)
+    scripcode = models.CharField(max_length=20,null=True)
+    co_code = models.IntegerField( primary_key=True)
     class Meta:
         indexes = [
             models.Index(fields=['symbol']),                          
             models.Index(fields=['company_name']),                    
-            models.Index(fields=['scripcode']),                       
+            models.Index(fields=['scripcode']),
         ]
     def __str__(self):
         return f"{self.symbol} — {self.company_name}"
+
+class finalcial(models.Model):
+    id = models.IntegerField(primary_key=True)
+    ttm_ason = models.IntegerField()
+    pe = models.FloatField()
+    roe_ttm = models.FloatField()   
+    company_id = models.ForeignKey(Company,to_field='co_code',on_delete=models.CASCADE)
 
 
 class Watchlist(models.Model):

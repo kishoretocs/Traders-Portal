@@ -4,7 +4,7 @@ from .models import Company,Watchlist
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
         model = Company
-        fields = ['id','company_name','symbol','scripcode']
+        fields = ['id','company_name','symbol','scripcode','co_code']
 
 class WatchlistSerializer(serializers.ModelSerializer):
     class Meta:

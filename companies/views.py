@@ -48,40 +48,78 @@ class WatchlistView(generics.ListAPIView):
             logger.error(f"Error fetching watchlist for user {self.request.user}: {e}")
             raise APIException("Unable to fetch watchlist at the moment.")
 
-class AddToWatchlist(APIView):
+class AddToWatchlist(generics.CreateAPIView):
+    serializer_class = WatchlistSerializer
     permission_classes = [permissions.IsAuthenticated]
 
-    def post(self, request):
+    def create(self, request):
+        company_id = request.data.get("company_id")
+        if not company_id:
+            raise ValidationError("Missing 'company_id' in request data.")
+
         try:
-            company_id = request.data.get("company_id")
-            if not company_id:
-                raise ValidationError("Missing 'company_id' in request data.")
-
             company = Company.objects.get(id=company_id)
-            watch, created = Watchlist.objects.get_or_create(user=request.user, company=company)
-
-            return Response(
-                {"message": "Added to watchlist" if created else "Already exists"},
-                status=status.HTTP_201_CREATED if created else status.HTTP_200_OK
-            )
         except Company.DoesNotExist:
             logger.warning(f"Company ID {company_id} not found for user {request.user}")
             raise NotFound("Company not found.")
-        except Exception as e:
-            logger.error(f"Unexpected error in AddToWatchlist: {str(e)}")
-            return Response({"error": "Something went wrong."}, status=500)
 
-class RemoveFromWatchlist(APIView):
+        watch, created = Watchlist.objects.get_or_create(user=request.user, company=company)
+
+        return Response(
+            {"message": "Added to watchlist" if created else "Already exists"},
+            status=status.HTTP_201_CREATED if created else status.HTTP_200_OK
+        )
+
+
+class RemoveFromWatchlist(generics.DestroyAPIView):
     permission_classes = [permissions.IsAuthenticated]
 
-    def delete(self, request, company_id):
+    def delete(self, request):
+        company_id = kwargs.get('company_id')
         try:
             watch = Watchlist.objects.filter(user=request.user, company_id=company_id)
             if not watch.exists():
                 raise NotFound("Company not in your watchlist.")
             watch.delete()
-            return Response({"message": "Removed from watchlist"}, status=200)
+            return Response({"message": "Removed from watchlist"}, status=status.HTTP_200_OK)
         except Exception as e:
             logger.error(f"Error removing watchlist item: {e}")
-            return Response({"error": "Failed to remove."}, status=500)
+            return Response({"error": "Failed to remove."}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+# class AddToWatchlist(APIView):
+#     permission_classes = [permissions.IsAuthenticated]
+
+#     def post(self, request):
+#         try:
+#             company_id = request.data.get("company_id")
+#             if not company_id:
+#                 raise ValidationError("Missing 'company_id' in request data.")
+
+#             company = Company.objects.get(id=company_id)
+#             watch, created = Watchlist.objects.get_or_create(user=request.user, company=company)
+
+#             return Response(
+#                 {"message": "Added to watchlist" if created else "Already exists"},
+#                 status=status.HTTP_201_CREATED if created else status.HTTP_200_OK
+#             )
+#         except Company.DoesNotExist:
+#             logger.warning(f"Company ID {company_id} not found for user {request.user}")
+#             raise NotFound("Company not found.")
+#         except Exception as e:
+#             logger.error(f"Unexpected error in AddToWatchlist: {str(e)}")
+#             return Response({"error": "Something went wrong."}, status=500)
+
+# class RemoveFromWatchlist(APIView):
+#     permission_classes = [permissions.IsAuthenticated]
+
+#     def delete(self, request, company_id):
+#         try:
+#             watch = Watchlist.objects.filter(user=request.user, company_id=company_id)
+#             if not watch.exists():
+#                 raise NotFound("Company not in your watchlist.")
+#             watch.delete()
+#             return Response({"message": "Removed from watchlist"}, status=200)
+#         except Exception as e:
+#             logger.error(f"Error removing watchlist item: {e}")
+#             return Response({"error": "Failed to remove."}, status=500)
 
